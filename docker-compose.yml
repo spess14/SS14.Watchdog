@@ -9,10 +9,9 @@ services:
       - 1212:1212/udp
     volumes:
       - instances:/watchdog/instances/
-      # # Uncomment to supply your own appsettings.yml
-      # - type: bind
-      #   source: /tmp/appsettings.yml
-      #   target: /watchdog/appsettings.yml
+      - type: bind
+        source: /home/.config/ss14-watchdog/appsettings.yml
+        target: /watchdog/appsettings.yml
 
 volumes:
   instances:
